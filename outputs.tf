@@ -10,3 +10,7 @@ output "static_ip" {
   value = aws_eip.default.public_ip
 }
 
+output "base_url" {
+  value = aws_api_gateway_deployment.default.invoke_url
+}
+
