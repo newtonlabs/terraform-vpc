@@ -11,6 +11,6 @@ output "static_ip" {
 }
 
 output "base_url" {
-  value = aws_api_gateway_deployment.default.invoke_url
+  value = "curl ${aws_api_gateway_deployment.default.invoke_url}/testHTTPS?host=${aws_instance.testserver.public_ip}"
 }
 
